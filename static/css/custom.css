@@ -1,0 +1,27 @@
+@font-face { font-family: 'BRBA_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.section {
+    width: 100%;
+    background-color: #fff3e6;
+}
+
+.nav.navbar-expand-lg.navbar-dark.bg-dark.fixed-top{
+    background-color: #c65353;
+}
+
+.navbar.bg-dark{
+    background-color: #ffdd99 !important;
+}
+.section.bottom-background {
+    height: 100px;
+    background: url("/static/img/footer.png")
+}
+.btm-img {
+    height: 3px;
+    position: relative;
+    top: 13px;
+}
+
+.nav-link {
+    font-family:'BRBA_B';
+}

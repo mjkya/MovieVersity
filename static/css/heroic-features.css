@@ -1,0 +1,16 @@
+@font-face { font-family: 'BRBA_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+
+body {
+    padding-top: 56px;
+    font-family:'BRBA_B';
+    font-size:20px;
+    
+}
+
+header.jumbotron.my-4 { background-color:#fff3e6; color: #fff3e6;}
