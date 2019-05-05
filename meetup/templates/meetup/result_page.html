@@ -1,0 +1,123 @@
+{% extends 'index.html'%}
+{% load staticfiles %}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=100%, initial-scale=1, shrink-to-fit=no, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>글쓰기 완료</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/result_page/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/result_page/blog-post.css' %}" rel="stylesheet">
+    
+    <!-- 위치 수정 필요 -->
+    <style>
+      #map { width: 500px; height: 300px;}
+    </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{%url 'main'%}"><h1>무비버시티</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+         <!-- <li class="nav-item active">
+            <a class="nav-link" href="{%url 'main'%}">무비버시티
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'login'%}">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'signup'%}">회원가입</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'boardform'%}">무비생성</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{%url 'mypage'%}">My Page</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 37.50611, lng: 127.0616346},
+              zoom: 8
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBolmeJdSOdRrGzt9u56xctMkGFA_wRplc&callback=initMap"
+        async defer></script>
+          
+        <!-- Title -->
+        <h1 class="mt-4">영화 모집 글쓰기가 완료되었습니다</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          글 제목
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on January 1, 2019 at 12:00 PM</p>
+
+        <hr>
+
+        <hr>
+
+        <!-- Post Content -->
+
+        <hr>
+          
+        <a href="{% url 'postlist' %}">리스트로 가기</a>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+    
+  </div>
+          {%endblock%}
+  <!-- /.container -->
+
+  <!-- Footer -->
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'javascript/result_page/jquery.min.js' %}"></script>
+  <script src="{% static 'javascript/result_page/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

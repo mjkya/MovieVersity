@@ -1,0 +1,11 @@
+{% for boards in boards.all %}
+    <h1>{{ boards.title }}</h1>
+    <p>{{ boards.pub_date }}</p>
+    <p>{{ boards.body }}</p>
+    <a href="{% url 'edit' pk=boards.pk %}">수정</a>
+    <br>
+    <a href="{% url 'remove' pk=boards.pk %}">삭제</a>
+    <br>
+    <a href="{% url 'attend' pk=boards.pk %}">참가</a>
+{% endfor %}
+<a href="{% url 'boardform' %}">글쓰기</a>

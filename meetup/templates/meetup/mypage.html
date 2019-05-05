@@ -1,0 +1,117 @@
+{% extends 'index.html'%}
+{% load staticfiles %}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MyPage</title>
+      <style>
+          @font-face { font-family: 'BRBA_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+          body {font-family: 'BRBA_B';}
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: 10%;
+    width: 20%;
+    height: 40%
+  }
+  .intro {
+   text-align:right
+  }
+  </style>
+  <style media="screen">
+  
+  </style>
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/mypage/blog-home.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+<br>
+        <h1 class="my-4">My Page
+        </h1>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <div class="card-body"><img src="{% static 'img/avengers.jpeg' %}" width="100%" height="450px"/></div>
+            <h2 class="card-title">어밴져스: 앤드게임</h2>
+            <p class="card-text">영화관: 강남역CGV</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017
+
+          </div>
+        </div>
+
+
+
+        <!-- Pagination -->
+
+
+     <section class="portfolio" id="portfolio">
+       <div class="container">
+           <br><br><br>
+         <h1 align="right" class="text-center text-uppercase text-secondary mb-0">Profile</h1>
+         <hr class="star-dark mb-5">
+       </div>
+<div class="Profile">
+  <h2 align="right">이소현</h2>
+  <p class="intro">성공회대학교</p>
+    
+  <p align="right"><button>connect</button></p>
+</div>
+
+
+         
+            
+        
+    <div>
+       
+        
+          <span class="notice">
+          </span>
+         
+    
+
+      </div>
+    </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        {%endblock%}
+</body>
+
+</html>

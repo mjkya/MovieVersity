@@ -1,0 +1,101 @@
+{% extends 'index.html'%}
+{% load staticfiles %}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>무비버시티</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/postlist/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/postlist/shop-homepage.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+        <br><br>
+      <div class="col-lg-3">
+        <br><br>
+        <h1 class="my-4">Postlist</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item">모집</a>
+          <a href="#" class="list-group-item">마감</a>
+        </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+<br><br><br><br>
+        <div class="row">
+   
+          {% for boards in boards.all %}
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"><img class="card-img-top" src="{% static 'http://placehold.it/700x400' %}" alt=""></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">{{ boards.title }}</a>
+                    </h4>
+                    <h5>게시자 아이디</h5>
+                    <p class="card-text">{{ boards.body }}</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  </div>
+                </div>
+                <a href="{% url 'edit' pk=boards.pk %}">수정</a>
+                <a href="{% url 'remove' pk=boards.pk %}">삭제</a>
+                <a href="{% url 'attend' pk=boards.pk %}">참가</a>
+              </div>
+            {% endfor %}
+
+        </div>"#"
+     <!-- /.row -->
+          
+        <a href="{% url 'boardform' %}">글쓰기</a>
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/postlist/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/postlist/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    {%endblock%}
+</body>
+
+</html>

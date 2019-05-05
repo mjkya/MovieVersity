@@ -1,0 +1,40 @@
+{% extends 'index.html'%}
+{% load staticfiles %}
+{%block content%}
+<br><br>
+<center>
+<table border="1" width="80%">
+<thead>
+    <tr>
+    <th>포스터</th>
+    <th>영화제목</th>
+    <th>감독</th>
+    <th>배우</th>
+    <th>출시일</th>
+    <th>상영시간</th>
+    <th>평점</th>
+    <th>영화장르</th>
+    
+    </tr>
+</thead>
+<tbody>
+{% for movie in object_list %}
+    <tr>
+    <td><img src='{{ movie.img_url }}'></td>
+    <td>{{ movie.title }}</td>
+    <td>{{ movie.director }}</td>
+    <td>{{ movie.actors }}</td>
+    <td>{{ movie.date }}일</td>
+    <td>{{ movie.length }}분</td>
+    <td>{{ movie.score }}/10점</td>
+    <td>{{ movie.genre }}</td>
+    
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+
+<a href="{% url 'create' %}">new</a>
+<a href="{% url 'parse' %}">크롤링시작</a>
+    </center>
+{%endblock%}

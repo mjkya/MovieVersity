@@ -1,0 +1,88 @@
+{% extends 'index.html'%}
+{% load staticfiles %}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>로그인 페이지</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/login_font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/login_icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/login_util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login/login_main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login/custom.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+   
+      <!--<center><img src="{% static 'img/login.png' %}" width="500px" height="150px"/></center>-->
+	<center><div class="limiter">
+		<div class="container-login" style="background-image: url('static/img/movie-wallpapers-38.jpg'); background-color:#pink;">
+            <br><Br>
+             <div class="container"><img src="{% static 'img/login.png' %}" width="600px" height="150px"/> 
+			<div class="wrap-login100 p-t-30 p-b-50">
+              
+				<form class="login100-form validate-form p-b-33 p-t-5">
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter user email">
+						<input class="input100" type="email" name="username" placeholder="User email">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-32">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/popper.js' %}"></script>
+	<script src="{% static 'javascript/login/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/moment.min.js' %}"></script>
+	<script src="{% static 'javascript/login/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'javascript/login/main.js' %}"></script>
+</center>
+    {%endblock%}
+</body>
+</html>
